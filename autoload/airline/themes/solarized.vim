@@ -60,11 +60,11 @@ function! airline#themes#solarized#refresh()
   """"""""""""""""""""""""""""""""""""""""""""""""
   " Normal mode
   if s:background == 'dark'
-    let s:N1 = [s:base3, (s:use_green ? s:green : s:base1), 'bold']
+    let s:N1 = [s:base3, s:green, 'bold']
     let s:N2 = [s:base2, (s:tty ? s:base01 : s:base00), '']
     let s:N3 = [s:base01, s:base02, '']
   else
-    let s:N1 = [s:base2, (s:use_green ? s:green : s:base00), 'bold']
+    let s:N1 = [s:base2, s:green, 'bold']
     let s:N2 = [(s:tty ? s:base01 : s:base2), s:base1, '']
     let s:N3 = [s:base1, s:base2, '']
   endif
@@ -79,7 +79,7 @@ function! airline#themes#solarized#refresh()
   endif
 
   " Insert mode
-  let s:I1 = [s:N1[0], s:yellow, 'bold']
+  let s:I1 = [s:N1[0], s:blue, 'bold']
   let s:I2 = s:N2
   let s:I3 = s:N3
   let s:IF = s:NF
